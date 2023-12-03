@@ -1,17 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webchat Demo</title>
-</head>
-<body>
-    <!-- Include the webchat script -->
-    <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
-    <script src="https://mediafiles.botpress.cloud/8e6b3ed8-f4a9-4225-9636-49d760477a69/webchat/config.js" defer></script>
-
-    <!-- Your HTML content goes here -->
-    <h1>Welcome to the Webchat</h1>
-    <p>This is a demo of the webchat.</p>
-</body>
-</html>
+<iframe
+            style="border: none; height: 100%"
+            srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
+            <script>
+              window.botpressWebChat.init({
+                  'composerPlaceholder': 'Placeholder text',
+                  'botName': 'Bot Name',
+                  'botId': 'b777b2c5-8b48-446e-88aa-35fbc25743f4',
+                  'botConversationDescription': 'Conversation',
+                  'hostUrl': 'https://cdn.botpress.cloud/webchat/v0',
+                  'messagingUrl': 'https://messaging.botpress.cloud',
+                  'clientId': 'BotID',
+                  'enableConversationDeletion': true,
+                  'showPoweredBy': true,
+                  'className': 'webchatIframe',
+                  'containerWidth': '100%25',
+                  'layoutWidth': '100%25',
+                  'hideWidget': true,
+                  'showCloseButton': false,
+                  'disableAnimations': true,
+                  'closeOnEscape': false,
+                  'showConversationsButton': false,
+                  'enableTranscriptDownload': false,
+                  'stylesheet': 'https://webchat-styler-css.botpress.app/prod/code/924e6f8e-a885-4719-8449-c08c2cbe82ca/v19149/style.css'
+                  
+              });
+            window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+            </script></body>"
+            width="100%"
+            height="100%"
+            ></iframe>
